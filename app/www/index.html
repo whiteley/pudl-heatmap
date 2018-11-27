@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>PUDL Heatmap</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of FAB
+  var fab = {lat: 45.509, lng: -122.681};
+  // The map, centered at FAB
+  var map = new google.maps.Map(
+    document.getElementById('map'), {
+      zoom: 17,
+      center: fab
+    });
+  // The marker, positioned at FAB
+  var marker = new google.maps.Marker({
+    position: fab,
+    map: map,
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    }
+  });
+}
+
+function queryStop() {
+  const Http = new XMLHttpRequest();
+  const feed = 'https://developer.trimet.org/ws/v2/alerts';
+  Http.open("GET", url + "/locIDs/12763/appID/
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfzu3SoK9Q1A_YqVC7j63lDFXQZ4OBZNQ&callback=initMap">
+    </script>
+  </body>
+</html>
